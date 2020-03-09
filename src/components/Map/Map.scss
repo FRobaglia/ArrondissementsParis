@@ -1,0 +1,39 @@
+.map {
+  width: 65%;
+  height: 100%;
+  display: inline-flex;
+  vertical-align:top;
+  justify-content: center;
+  align-items: center;
+
+
+  svg {
+    width: 90%;
+  }
+}
+
+g.full {
+  cursor: pointer;
+
+  &:hover, &.highlighted {
+    .surface {
+      fill: $blue;
+    }
+    .text {
+      fill: white;
+    }
+  }
+
+  &.favorite {
+    .surface {
+      fill: $green
+    }
+    .text {
+      fill: white
+    }
+  }
+
+  .surface, .texte {
+    transition: fill .3s;
+  }
+}

@@ -1,0 +1,120 @@
+// Vendors
+
+@import './vendors/reset';
+
+// Config
+
+@import './config/fonts';
+@import './config/variables';
+
+// Components
+
+@import './../components/ChoiceModal/ChoiceModal.scss';
+@import './../components/DistrictModal/DistrictModal.scss';
+@import './../components/ChartModal/ChartsModal.scss';
+@import './../components/Map/Map.scss';
+@import './../components/InfoModal/InfoModal.scss';
+@import './../components/RatingModal/RatingModal.scss';
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lato';
+  overflow: hidden;
+  background: $lightgrey;
+}
+
+h1 {
+  font-weight: 400;
+  color: $blue;
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+#root, main, .content {
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+}
+
+.abréviation {
+  display: inline-block;
+  font-size: 11px;
+  transform: translateY(-7px);
+}
+
+button.primary {
+  cursor: pointer;
+  width: 170px;
+  height: 40px;
+  border: 1.5px solid $blue;
+  color: $blue;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 16px;
+  transition: .2s;
+  font-size: 18px;
+  background: $blue;
+  color: white;
+
+  &:hover:not(.disabled) {
+    transform: scale(.9);
+  }
+
+  &.disabled {
+    background: transparent;
+    border: 1.5px solid $grey;
+    color: $grey;
+    cursor: not-allowed;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+button.secondary {
+  font-size: 13px;
+  color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+  font-family: 'Lato';
+  display: block;
+  padding: 4px 8px;
+  border-radius: 50px;
+  outline: none;
+  display: inline-block;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background: $middlegrey;
+  width: 100%;
+}
+.grey-text {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: $grey;
+}
